@@ -1,4 +1,4 @@
-/* --- RESET E VARIÁVEIS --- */
+/* --- 1. RESET E VARIÁVEIS --- */
 :root {
     --primary-green: #4f6326;
     --dark-green: #2a3315;
@@ -15,13 +15,18 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'DM Sans', sans-serif;
     color: var(--text-main);
     line-height: 1.6;
 }
 
-h1, h2, h3, h4, .serif-font, .logo, .price, .location {
+/* Regra Global de Tipografia */
+h1, h2, h3, h4, .serif-font, .logo, .price, .location, .about-logo {
     font-family: 'Crimson Text', serif;
 }
 
@@ -41,7 +46,7 @@ ul {
     padding: 0 20px;
 }
 
-/* --- BOTÕES --- */
+/* --- 2. BOTÕES GERAIS --- */
 .btn {
     padding: 10px 24px;
     border-radius: 50px;
@@ -60,7 +65,7 @@ ul {
     opacity: 0.9;
 }
 
-/* --- HEADER --- */
+/* --- 3. HEADER & NAV --- */
 header {
     padding: 20px 0;
     background: var(--white);
@@ -73,7 +78,6 @@ nav {
 }
 
 .logo {
-    font-family: 'Playfair Display', serif;
     font-size: 1.2rem;
     font-weight: 700;
     color: #d4a74e;
@@ -81,13 +85,6 @@ nav {
     flex-direction: column;
     line-height: 1;
     text-align: center;
-}
-
-.logo span {
-    color: var(--primary-green);
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
 }
 
 .nav-links {
@@ -109,7 +106,7 @@ nav {
     gap: 15px;
 }
 
-/* --- HERO SECTION --- */
+/* --- 4. HOME: HERO & FEATURES --- */
 .hero {
     text-align: center;
     padding: 60px 0;
@@ -132,67 +129,13 @@ nav {
     background-position: center;
 }
 
-/* --- SEÇÃO FALE CONOSCO (CTA) --- */
-.cta-contact {
-    text-align: center;
-    padding: 100px 0; /* Espaçamento generoso em cima e embaixo */
-    background-color: var(--white);
-}
-
-.cta-contact h2 {
-    font-size: 3.5rem; /* Tamanho grande e elegante */
-    margin-bottom: 20px;
-    font-weight: 400; /* Fonte Crimson Text não precisa de muito peso */
-    color: var(--text-main);
-}
-
-.cta-contact p {
-    color: #666;
-    max-width: 600px; /* Limita a largura para o texto não esticar demais */
-    margin: 0 auto 40px; /* Centraliza o texto e dá espaço para o botão */
-    font-size: 1.1rem;
-}
-
-/* Botão Grande do WhatsApp */
-.btn-big-whatsapp {
-    background-color: var(--primary-green); /* Usa o verde musgo da sua marca (#4f6326) */
-    color: var(--white);
-    text-decoration: none;
-    padding: 18px 120px; /* Altura e Largura (bem largo como na foto) */
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1rem;
-    display: inline-block;
-    transition: transform 0.2s, opacity 0.2s;
-}
-
-.btn-big-whatsapp:hover {
-    opacity: 0.9;
-    transform: translateY(-3px); /* Efeito suave de subir ao passar o mouse */
-}
-
-/* Ajuste para Celular */
-@media (max-width: 768px) {
-    .cta-contact h2 {
-        font-size: 2.5rem;
-    }
-    .btn-big-whatsapp {
-        padding: 15px 60px; /* Botão menor no celular */
-        width: 100%; /* Ocupa a largura toda se precisar */
-        max-width: 300px;
-    }
-}
-
-
-/* --- TRUSTED BY (Logos)*/
 .trusted-by {
     padding-top: 40px; 
 }
 
-/* Adicionei esta regra para aplicar a borda apenas no container interno */
 .trusted-by .container {
-    border-bottom: 1px solid #eee; /* A linha agora respeita a largura do container */
-    padding-bottom: 40px; /* Espaço entre o conteúdo e a linha */
+    border-bottom: 1px solid #eee;
+    padding-bottom: 40px;
 }
 
 .trusted-label {
@@ -213,7 +156,6 @@ nav {
     height: 30px;
 }
 
-/* --- FEATURES --- */
 .features {
     padding: 80px 0;
 }
@@ -239,7 +181,6 @@ nav {
 }
 
 .feature-item h3 {
-    font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     margin-bottom: 10px;
 }
@@ -249,46 +190,332 @@ nav {
     font-size: 0.9rem;
 }
 
-.features-image {
+.imagem-destaque {
+    display: block;
+    margin: 40px auto 0;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: auto;
+}
+
+/* --- 5. SEÇÃO FALE CONOSCO (CTA) --- */
+.cta-contact {
+    text-align: center;
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.cta-contact h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: var(--text-main);
+}
+
+.cta-contact p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+}
+
+.btn-big-whatsapp {
+    background-color: var(--primary-green);
+    color: var(--white);
+    text-decoration: none;
+    padding: 18px 120px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-block;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-big-whatsapp:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+}
+
+/* --- 6. LISTAGEM DE IMÓVEIS --- */
+.listings {
+    padding: 40px 0 80px;
+    background-color: var(--white);
+}
+
+.search-container {
+    margin-bottom: 40px;
+}
+
+.search-box {
+    background-color: #f9f9f9;
+    padding: 15px 25px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 400px;
+}
+
+.search-box i {
+    color: #aaa;
+    font-size: 1.2rem;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
     width: 100%;
-    height: 400px;
-    background-image: url('https://images.unsplash.com/photo-1600596542815-2495db98dada?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.properties-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 85px;
+}
+
+.property-card {
+    display: flex;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--white);
+    height: 300px;
+    transition: box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card-image {
+    width: 40%;
     background-size: cover;
     background-position: center;
 }
 
-/* --- CONTACT / CTA --- */
-.contact {
-    text-align: center;
-    padding: 80px 0;
+.card-content {
+    width: 60%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.contact h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.contact p {
+.card-info h3 {
+    /* Retirado 'Inter' para herdar Crimson Text (h3 global) ou DM Sans */
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.location {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    margin-bottom: 5px;
+}
+
+.sub-location {
     color: var(--text-light);
-    max-width: 600px;
-    margin: 0 auto 30px;
+    font-size: 0.9rem;
 }
 
-.btn-whatsapp {
-    background-color: var(--primary-green);
+.favorite-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #888;
+    transition: color 0.3s;
+}
+
+.favorite-btn:hover {
+    color: var(--primary-green);
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px; 
+    margin-top: 20px;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    font-weight: 700;
+}
+
+.price span {
+    font-size: 0.9rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+}
+
+.btn-whatsapp-card {
+    background-color: #25D366;
     color: white;
-    padding: 12px 40px;
-    font-size: 1rem;
+    padding: 10px 24px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
 }
 
-/* --- FOOTER --- */
+.btn-whatsapp-card:hover {
+    opacity: 0.9;
+}
+
+/* --- 7. QUEM SOMOS --- */
+.about-hero {
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 50px;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-block {
+    padding: 40px 0;
+}
+
+.intro-block {
+    border-bottom: 1px solid #eee;
+}
+
+.intro-block p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.mission-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    border-bottom: 1px solid #eee;
+}
+
+.mission-text {
+    flex: 1;
+    max-width: 50%;
+    order: 1;
+}
+
+.mission-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+}
+
+.mission-block p, .values-text p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.about-logo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gold);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.about-logo i {
+    font-size: 3rem;
+    color: var(--primary-green);
+    margin-bottom: 10px;
+}
+
+.about-logo span {
+    color: var(--primary-green);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.values-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    padding-bottom: 80px;
+}
+
+.values-icon {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    order: 1; 
+}
+
+.values-text {
+    flex: 1;
+    max-width: 50%;
+    order: 2;
+}
+
+.green-grid {
+    width: 150px;
+    height: 150px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.green-grid > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    background-color: var(--primary-green);
+}
+
+.green-grid div:nth-child(1) { 
+    background-color: #d84545; 
+}
+
+/* --- 8. FOOTER --- */
 footer {
     background-color: var(--dark-green);
     color: #d1d1d1;
     padding: 60px 0 20px;
 }
 
-/* A linha do footer já estava correta, pois está dentro do grid que está dentro do container */
 .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -326,7 +553,6 @@ footer {
 
 .footer-col h4 {
     color: var(--white);
-    font-family: 'Playfair Display', serif;
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
@@ -357,332 +583,52 @@ footer {
     gap: 20px;
 }
 
-/* --- RESPONSIVO --- */
+/* --- 9. RESPONSIVIDADE (MOBILE) --- */
 @media (max-width: 768px) {
+    /* Geral */
     .hero h1 { font-size: 2.5rem; }
-    .features-grid { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr; }
     nav { flex-direction: column; gap: 15px; }
     .nav-links { flex-direction: column; text-align: center; gap: 10px; }
-}
-
-/* --- SEÇÃO DE LISTAGEM DE IMÓVEIS --- */
-.listings {
-    padding: 40px 0 80px;
-    background-color: var(--white);
-}
-
-/* Barra de Pesquisa */
-.search-container {
-    margin-bottom: 40px;
-}
-
-.search-box {
-    background-color: #f9f9f9; /* Fundo cinza bem claro */
-    padding: 15px 25px;
-    border-radius: 8px; /* Cantos levemente arredondados como na imagem */
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    max-width: 400px; /* Largura da barra */
-}
-
-.search-box i {
-    color: #aaa;
-    font-size: 1.2rem;
-}
-
-.search-box input {
-    border: none;
-    background: transparent;
-    outline: none;
-    width: 100%;
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    color: var(--text-main);
-}
-
-.properties-list {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
     
-    /* ADICIONE ESSA LINHA ABAIXO: */
-    margin-bottom: 85px; /* Isso cria um espaço de 80px no final da lista */
-}
-
-/* Estilo do Card */
-.property-card {
-    display: flex;
-    border: 1px solid #e0e0e0;
-    border-radius: 20px; /* Arredondamento grande como na imagem */
-    overflow: hidden;
-    background: var(--white);
-    height: 300px; /* Altura fixa para manter o padrão */
-    transition: box-shadow 0.3s ease;
-}
-
-.property-card:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-}
-
-/* Imagem do Card (Esquerda) */
-.card-image {
-    width: 40%;
-    background-size: cover;
-    background-position: center;
-}
-
-/* Conteúdo do Card (Direita) */
-.card-content {
-    width: 60%;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* Topo do Conteúdo (Texto + Coração) */
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.card-info h3 {
-    font-family: 'Inter', sans-serif; /* A fonte do título parece ser sans-serif na imagem */
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: #444;
-    margin-bottom: 15px;
-}
-
-.location {
-    font-size: 1.2rem;
-    font-family: 'Playfair Display', serif; /* Fonte serifada para a cidade */
-    color: var(--text-main);
-    margin-bottom: 5px;
-}
-
-.sub-location {
-    color: var(--text-light);
-    font-size: 0.9rem;
-}
-
-.favorite-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #888;
-    transition: color 0.3s;
-}
-
-.favorite-btn:hover {
-    color: var(--primary-green);
-}
-
-/* Rodapé do Card (Preço + Botão) */
-.card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #f0f0f0; /* Linha sutil opcional, se quiser remover */
-    padding-top: 20px; 
-    margin-top: 20px;
-}
-
-.price {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    color: var(--primary-green); /* Preço verde */
-    font-weight: 700;
-}
-
-.price span {
-    font-size: 0.9rem;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-}
-
-.btn-whatsapp-card {
-    background-color: #25D366; /* Verde oficial do WhatsApp */
-    color: white;
-    padding: 10px 24px;
-    border-radius: 50px;
-    border: none;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.9rem;
-    transition: opacity 0.3s;
-}
-
-.btn-whatsapp-card:hover {
-    opacity: 0.9;
-}
-
-/* --- ESTILOS QUEM SOMOS (quem-somos.html) --- */
-
-.about-hero {
-    /* Padding e Título */
-    padding-top: 60px;
-    padding-bottom: 20px;
-}
-
-.about-hero h1 {
-    font-size: 3.5rem;
-    font-weight: 400;
-    margin-bottom: 50px;
-    text-align: center;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.about-block {
-    padding: 40px 0;
-}
-
-/* 1. Bloco de Introdução (Texto centralizado) */
-.intro-block {
-    border-bottom: 1px solid #eee; /* Linha de divisão */
-}
-
-.intro-block p {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    color: var(--text-main);
-}
-
-/* 2. Bloco do Meio (Equipe - Texto e Logo, lado a lado) */
-.mission-block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 80px;
-    border-bottom: 1px solid #eee; /* Linha de divisão */
-}
-
-.mission-text {
-    flex: 1;
-    max-width: 50%;
-    order: 1; /* Padrão: Texto à esquerda */
-}
-
-.mission-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    order: 2; /* Padrão: Imagem à direita */
-}
-
-.mission-block p {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    line-height: 1.8;
-}
-
-/* Estilo do Logo ADS na seção Quem Somos */
-.about-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--gold);
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-    text-align: center;
-}
-
-.about-logo i {
-    font-size: 3rem;
-    color: var(--primary-green);
-    margin-bottom: 10px;
-}
-
-.about-logo span {
-    color: var(--primary-green);
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-/* 3. Bloco de Valores (Grid de pontos e Texto, lado a lado) */
-.values-block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 80px;
-    padding-bottom: 80px;
-}
-
-.values-icon {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    order: 1; 
-}
-
-.values-text {
-    flex: 1;
-    max-width: 50%;
-    order: 2;
-}
-
-.values-text p {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    line-height: 1.8;
-}
-
-/* Estilo da grade de pontos verdes/vermelhos */
-.green-grid {
-    width: 150px;
-    height: 150px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 5px;
-}
-
-.green-grid > div {
-    width: 100%;
-    height: 100%;
-    border-radius: 3px;
-    background-color: var(--primary-green);
-}
-
-/* Ponto Vermelho (Destaque) - 1º item da grade */
-.green-grid div:nth-child(1) { 
-    background-color: #d84545; 
-}
-
-
-/* --- Responsividade para Celular --- */
-@media (max-width: 768px) {
+    /* Features & Footer Grid */
+    .features-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    
+    /* Cards de Imóveis */
     .property-card {
         flex-direction: column;
         height: auto;
     }
-
     .card-image {
         width: 100%;
         height: 200px;
     }
-
     .card-content {
         width: 100%;
         padding: 20px;
     }
-    
     .card-info h3 {
         font-size: 1rem;
     }
 
+    /* CTA Contact */
+    .cta-contact h2 {
+        font-size: 2.5rem;
+    }
+    .btn-big-whatsapp {
+        padding: 15px 60px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Quem Somos */
+    .mission-block, .values-block {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    .mission-text, .values-text, .mission-image {
+        max-width: 100%;
+        order: unset; /* Reseta a ordem para ficar um embaixo do outro */
+    }
 }
