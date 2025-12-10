@@ -132,6 +132,58 @@ nav {
     background-position: center;
 }
 
+/* --- SEÇÃO FALE CONOSCO (CTA) --- */
+.cta-contact {
+    text-align: center;
+    padding: 100px 0; /* Espaçamento generoso em cima e embaixo */
+    background-color: var(--white);
+}
+
+.cta-contact h2 {
+    font-size: 3.5rem; /* Tamanho grande e elegante */
+    margin-bottom: 20px;
+    font-weight: 400; /* Fonte Crimson Text não precisa de muito peso */
+    color: var(--text-main);
+}
+
+.cta-contact p {
+    color: #666;
+    max-width: 600px; /* Limita a largura para o texto não esticar demais */
+    margin: 0 auto 40px; /* Centraliza o texto e dá espaço para o botão */
+    font-size: 1.1rem;
+}
+
+/* Botão Grande do WhatsApp */
+.btn-big-whatsapp {
+    background-color: var(--primary-green); /* Usa o verde musgo da sua marca (#4f6326) */
+    color: var(--white);
+    text-decoration: none;
+    padding: 18px 120px; /* Altura e Largura (bem largo como na foto) */
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-block;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-big-whatsapp:hover {
+    opacity: 0.9;
+    transform: translateY(-3px); /* Efeito suave de subir ao passar o mouse */
+}
+
+/* Ajuste para Celular */
+@media (max-width: 768px) {
+    .cta-contact h2 {
+        font-size: 2.5rem;
+    }
+    .btn-big-whatsapp {
+        padding: 15px 60px; /* Botão menor no celular */
+        width: 100%; /* Ocupa a largura toda se precisar */
+        max-width: 300px;
+    }
+}
+
+
 /* --- TRUSTED BY (Logos)*/
 .trusted-by {
     padding-top: 40px; 
@@ -471,6 +523,146 @@ footer {
 .btn-whatsapp-card:hover {
     opacity: 0.9;
 }
+
+/* --- ESTILOS QUEM SOMOS (quem-somos.html) --- */
+
+.about-hero {
+    /* Padding e Título */
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 50px;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-block {
+    padding: 40px 0;
+}
+
+/* 1. Bloco de Introdução (Texto centralizado) */
+.intro-block {
+    border-bottom: 1px solid #eee; /* Linha de divisão */
+}
+
+.intro-block p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+/* 2. Bloco do Meio (Equipe - Texto e Logo, lado a lado) */
+.mission-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    border-bottom: 1px solid #eee; /* Linha de divisão */
+}
+
+.mission-text {
+    flex: 1;
+    max-width: 50%;
+    order: 1; /* Padrão: Texto à esquerda */
+}
+
+.mission-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2; /* Padrão: Imagem à direita */
+}
+
+.mission-block p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* Estilo do Logo ADS na seção Quem Somos */
+.about-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gold);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.about-logo i {
+    font-size: 3rem;
+    color: var(--primary-green);
+    margin-bottom: 10px;
+}
+
+.about-logo span {
+    color: var(--primary-green);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* 3. Bloco de Valores (Grid de pontos e Texto, lado a lado) */
+.values-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    padding-bottom: 80px;
+}
+
+.values-icon {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    order: 1; 
+}
+
+.values-text {
+    flex: 1;
+    max-width: 50%;
+    order: 2;
+}
+
+.values-text p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* Estilo da grade de pontos verdes/vermelhos */
+.green-grid {
+    width: 150px;
+    height: 150px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.green-grid > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    background-color: var(--primary-green);
+}
+
+/* Ponto Vermelho (Destaque) - 1º item da grade */
+.green-grid div:nth-child(1) { 
+    background-color: #d84545; 
+}
+
 
 /* --- Responsividade para Celular --- */
 @media (max-width: 768px) {
