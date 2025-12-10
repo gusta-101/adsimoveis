@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro - ADS Imobiliária</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .left {
+            width: 65%;
+            background: #fff;
+            padding: 40px 60px;
+        }
+
+        .right {
+            width: 35%;
+            background: #d9edc8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right img {
+            width: 70%;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        form {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 6px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .full {
+            grid-column: span 2;
+        }
+
+        .upload-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #e7e7e7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .submit-btn {
+            margin-top: 40px;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #3be068, #2ecc71);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="logo.png" alt="ADS Imobiliária" style="height:60px; margin-bottom:20px;" />
+
+            <h1>Cadastre-se</h1>
+
+            <form>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input type="text" placeholder="Digite seu nome" />
+                    </div>
+                    <div class="form-group">
+                        <label>CPF</label>
+                        <input type="text" placeholder="XXX.XXX.XXX-XX" />
+                    </div>
+
+                    <div class="full"><label>Endereço</label></div>
+
+                    <div class="form-group">
+                        <label>Estado</label>
+                        <input type="text" placeholder="Pesquisar por UF" />
+                    </div>
+                    <div class="form-group">
+                        <label>Cidade</label>
+                        <input type="text" placeholder="Pesquisar por cidade" />
+                    </div>
+                    <div class="form-group">
+                        <label>CEP</label>
+                        <input type="text" placeholder="XXXXX-XXX" />
+                    </div>
+                    <div class="form-group">
+                        <label>Rua</label>
+                        <input type="text" placeholder="Digite o nome da rua" />
+                    </div>
+                    <div class="form-group">
+                        <label>Número da Casa</label>
+                        <input type="text" placeholder="Digite o número da casa" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" placeholder="Digite seu email" />
+                    </div>
+                    <div class="form-group">
+                        <label>Número do Celular</label>
+                        <input type="text" placeholder="Digite o número de celular" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Senha</label>
+                        <input type="password" placeholder="Digite sua senha" />
+                    </div>
+                    <div class="form-group">
+                        <label>Confirmar Senha</label>
+                        <input type="password" placeholder="Digite sua senha novamente" />
+                    </div>
+
+                    <div class="form-group full">
+                        <label>Imagem de perfil</label>
+                        <div class="upload-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Empty.png/240px-Empty.png" width="60" />
+                        </div>
+                    </div>
+                </div>
+
+                <button class="submit-btn">Registrar</button>
+            </form>
+        </div>
+
+        <div class="right">
+            <img src="house.png" alt="Imagem lateral" />
+        </div>
+    </div>
+</body>
+</html>
