@@ -72,11 +72,3 @@ Abra o arquivo index.html no seu navegador ou use o Live Server do VS Code.
 👨‍💻 Autor
 Gustavo Nogueira Lima  Estudante de Análise e Desenvolvimento de Sistemas - IF Baiano
 Joao Fernandes Neto Arnizaut Rocha  Estudante de Análise e Desenvolvimento de Sistemas - IF Baiano
-
-Feito com 💚 e muito código.
-
-
-### Dicas para personalizar:
-1.  **Link do LinkedIn:** Onde tem `seu-linkedin`, coloque o link do seu perfil real.
-2.  **Imagens:** Se quiser que o print do site apareça mesmo, tire o print, salve como `preview.png`, suba para o GitHub e mude a linha `![Preview Desktop](caminho-da-imagem)`.
-3.  **Link do Site:** Eu já montei o link provável do seu GitHub Pages (`https://gusta-101.github.io/adsimoveis/`), mas teste para ver se está abrindo.
