@@ -58,6 +58,7 @@ Bash
 cd adsimoveis
 Abra o arquivo index.html no seu navegador ou use o Live Server do VS Code.
 
-👨‍💻 Autor
+```
+💻 Autores 
 Gustavo Nogueira Lima  Estudante de Análise e Desenvolvimento de Sistemas - IF Baiano
 Joao Fernandes Neto Arnizaut Rocha  Estudante de Análise e Desenvolvimento de Sistemas - IF Baiano
