@@ -25,17 +25,6 @@ A página apresenta uma imobiliária moderna, com listagem de imóveis, seção 
 
 ---
 
-## 📸 Screenshots
-
-### Versão Desktop
-![Preview Desktop](assets/img/pageinicial2.avif) 
-*(Dica: Você pode substituir esse caminho pela imagem de print do seu site)*
-
-### Versão Mobile
-A interface se adapta perfeitamente a dispositivos móveis.
-
----
-
 ## 🛠 Tecnologias Utilizadas
 
 * **HTML5:** Estruturação semântica.
